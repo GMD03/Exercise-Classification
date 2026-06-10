@@ -1,4 +1,4 @@
-import { Activity, Battery, Wifi, ActivitySquare, ListTodo } from 'lucide-react';
+import { Wifi, ActivitySquare, ListTodo } from 'lucide-react';
 import { useDummyData } from './useDummyData';
 import './App.css';
 
@@ -16,10 +16,6 @@ function App() {
           <div className="badge online">
             <Wifi size={18} />
             <span>{deviceStatus.connected ? 'Connected' : 'Offline'}</span>
-          </div>
-          <div className="badge battery">
-            <Battery size={18} />
-            <span>{deviceStatus.battery}%</span>
           </div>
         </div>
       </header>
@@ -53,7 +49,6 @@ function App() {
         {/* Gait Metrics Panel */}
         <section className="glass-panel metrics-panel animate-slide-up">
           <div className="panel-header">
-            <Activity size={24} />
             <h3>Gait Metrics</h3>
           </div>
           
