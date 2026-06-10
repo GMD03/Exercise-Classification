@@ -1,12 +1,15 @@
 import { Wifi, ActivitySquare, ListTodo } from 'lucide-react';
 import { useDummyData } from './useDummyData';
+import { SparkEffect } from './components/ui/spark-effect';
 import './App.css';
 
 function App() {
   const { currentActivity, confidence, history, metrics, deviceStatus } = useDummyData();
 
   return (
-    <div className="app-container animate-fade-in">
+    <>
+      <SparkEffect />
+      <div className="app-container animate-fade-in">
       <header className="header">
         <div className="title-group">
           <h1>Rehabelt Model Dashboard</h1>
@@ -103,6 +106,7 @@ function App() {
         
       </main>
     </div>
+    </>
   );
 }
 
